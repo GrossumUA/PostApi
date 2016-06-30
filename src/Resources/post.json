@@ -1,0 +1,37 @@
+{
+    "name": "Grossum post Client",
+    "apiVersion": "1.0",
+    "description": "Guzzle service description of Post API",
+    "baseUrl": "http://po.st/",
+    "operations": {
+        "abstract.post": {
+            "parameters": {
+                "apiKey": {
+                    "location": "query",
+                    "description": "Your Post apiKey",
+                    "required": true
+                }
+            }
+        },
+        "Shorten": {
+            "extends" : "abstract.bitly",
+            "httpMethod": "GET",
+            "uri": "/api/shorten",
+            "summary" : "Given a long URL, returns a post short URL.",
+            "parameters": {
+                "longUrl": {
+                    "location": "query",
+                    "type" : "string",
+                    "description": "is a long URL to be shortened (example: http://radiumone.com).",
+                    "required": true
+                },
+                "format": {
+                    "location": "query",
+                    "type" : "string",
+                    "description": "enables a simplified response – just the shortened link in text format.",
+                    "required": false
+                }
+            }
+        }
+   }
+}
