@@ -14,7 +14,7 @@
             }
         },
         "Shorten": {
-            "extends" : "abstract.bitly",
+            "extends" : "abstract.post",
             "httpMethod": "GET",
             "uri": "/api/shorten",
             "summary" : "Given a long URL, returns a post short URL.",

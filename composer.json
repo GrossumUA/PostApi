@@ -3,7 +3,7 @@
     "description": "PHP Library based on Guzzle to consume po.st API",
     "keywords": ["Post", "api", "guzzle"],
     "require": {
-        "guzzle/guzzle": "3.0"
+        "guzzle/guzzle": "~3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.4"
