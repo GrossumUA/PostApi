@@ -10,6 +10,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  */
 class TokenAuthPlugin implements EventSubscriberInterface
 {
+    /** @var string $token */
     private $token;
 
     /**
@@ -20,9 +21,17 @@ class TokenAuthPlugin implements EventSubscriberInterface
         $this->token = $token;
     }
 
+    /**
+     * @return array
+     */
     public static function getSubscribedEvents()
     {
-        return array('command.before_prepare' => array('onBeforePrepare', 255));
+        return [
+            'command.before_prepare' => [
+                'onBeforePrepare',
+                255
+            ]
+        ];
     }
 
     /**
